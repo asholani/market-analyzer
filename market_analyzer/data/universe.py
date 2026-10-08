@@ -121,5 +121,5 @@ def load_market_universe() -> dict[str, str]:
     for source in INDEX_SOURCES.values():
         constituents = _build_index_dict(source)
         universe.update({k: v for k, v in constituents.items() if k not in universe})
-    return universe# -*- coding: utf-8 -*-
+    return universe
 

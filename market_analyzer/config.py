@@ -50,5 +50,4 @@ ASIAN_FLAGSHIPS = {
     "0939.HK": "China Construction Bank",
     "600519.SS": "Kweichow Moutai",
     "300750.SZ": "CATL (Contemporary Amperex)",
-}# -*- coding: utf-8 -*-
-
+}

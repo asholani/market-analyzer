@@ -15,5 +15,5 @@ def test_clean_ticker_does_not_duplicate_suffix():
 
 
 def test_clean_ticker_strips_wikipedia_footnotes():
-    assert clean_ticker("MSFT[1]") == "MSFT"# -*- coding: utf-8 -*-
+    assert clean_ticker("MSFT[1]") == "MSFT"
 

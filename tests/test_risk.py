@@ -75,5 +75,5 @@ def test_capm_without_benchmark_reports_error():
 
 
 def test_too_little_history_returns_none():
-    assert compute_risk_metrics(make_prices(n=30)) is None# -*- coding: utf-8 -*-
+    assert compute_risk_metrics(make_prices(n=30)) is None
 

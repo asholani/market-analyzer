@@ -240,5 +240,5 @@ def compute_piotroski(
         criteria["Asset Turnover Increasing"] = s["turnover"][-1] > s["turnover"][-2]
 
     score = sum(1 for passed in criteria.values() if passed)
-    return {"score": score, "max_score": len(criteria), "criteria": criteria}# -*- coding: utf-8 -*-
+    return {"score": score, "max_score": len(criteria), "criteria": criteria}
 

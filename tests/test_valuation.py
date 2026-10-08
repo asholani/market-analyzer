@@ -68,5 +68,4 @@ def test_analyst_view_upside_and_distribution():
 def test_analyst_view_none_without_target():
     assert get_analyst_view({}, None, 100.0) is None
     assert get_analyst_view({"targetMeanPrice": 120.0}, None, None) is None
-    assert get_analyst_view({"targetMeanPrice": 120.0}, None, 100.0, is_commodity=True) is None# -*- coding: utf-8 -*-
-
+    assert get_analyst_view({"targetMeanPrice": 120.0}, None, 100.0, is_commodity=True) is None

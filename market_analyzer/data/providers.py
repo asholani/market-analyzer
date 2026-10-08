@@ -76,5 +76,5 @@ def get_news(asset_name: str, limit: int = 5) -> list[dict]:
             "published": entry.published,
             "link": entry.link,
         })
-    return news# -*- coding: utf-8 -*-
+    return news
 

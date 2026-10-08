@@ -182,5 +182,5 @@ def compute_risk_metrics(
         "alpha": capm["alpha"],
         "r_squared": capm["r_squared"],
         "benchmark_error": capm["error"],
-    }# -*- coding: utf-8 -*-
+    }
 

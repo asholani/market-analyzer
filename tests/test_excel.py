@@ -45,5 +45,5 @@ def test_report_for_commodity_has_no_fundamental_sheets():
         quant_metrics=sample_quant(), benchmark_name=None,
         is_financial=False, is_commodity=True,
     )
-    assert set(read_sheets(data)) == {"Overview", "Quantitative Risk"}# -*- coding: utf-8 -*-
+    assert set(read_sheets(data)) == {"Overview", "Quantitative Risk"}
 

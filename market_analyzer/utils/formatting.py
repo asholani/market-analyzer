@@ -99,5 +99,4 @@ def build_profile_table(info: dict, is_commodity: bool = False) -> pd.DataFrame:
             ("Website", safe_str(info.get("website"))),
         ]
 
-    return pd.DataFrame(data, columns=["Attribute", "Value"])# -*- coding: utf-8 -*-
-
+    return pd.DataFrame(data, columns=["Attribute", "Value"])

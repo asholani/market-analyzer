@@ -171,5 +171,5 @@ def get_analyst_view(
         "distribution": distribution,
         "counts": {"buy": buy, "hold": hold, "sell": sell, "total": total},
         "source_reliable": counts is not None,
-    }# -*- coding: utf-8 -*-
+    }
 

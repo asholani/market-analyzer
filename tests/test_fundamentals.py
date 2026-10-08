@@ -82,5 +82,5 @@ def test_piotroski_perfect_score_on_improving_company():
 def test_piotroski_none_when_data_missing():
     assert compute_piotroski(None, None, None) is None
     assert compute_piotroski(make_income(), make_income(), pd.DataFrame()) is None
-    assert compute_piotroski(make_income(), make_income(), make_income(), is_financial=True) is None# -*- coding: utf-8 -*-
+    assert compute_piotroski(make_income(), make_income(), make_income(), is_financial=True) is None
 
