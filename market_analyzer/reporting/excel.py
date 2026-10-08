@@ -120,5 +120,5 @@ def generate_excel_report(
             _risk_sheet(quant_metrics, benchmark_name, is_commodity).to_excel(
                 writer, sheet_name="Quantitative Risk", index=False
             )
-    return output.getvalue()# -*- coding: utf-8 -*-
+    return output.getvalue()
 
