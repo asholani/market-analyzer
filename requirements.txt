@@ -1,0 +1,10 @@
+streamlit>=1.40
+yfinance>=0.2.40
+feedparser
+pandas
+numpy
+scipy
+requests
+altair
+openpyxl
+lxml
