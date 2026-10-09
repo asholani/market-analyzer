@@ -7,7 +7,7 @@
 A Streamlit dashboard combining **fundamental analysis** and **quantitative market-risk
 assessment** for stocks and commodity futures.
 
-**Live demo:** _add your Streamlit Cloud link here_
+**Live demo:** [market-analyzer-app.streamlit.app](https://market-analyzer-app.streamlit.app/)
 
 ![Overview](assets/screenshot_overview.png)
 ![Risk](assets/screenshot_risk.png)
