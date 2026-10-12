@@ -69,6 +69,22 @@ $$\text{Sharpe} = \frac{\mathbb{E}[r - r_f]}{\sigma}\sqrt{252} \qquad \text{Sort
 
 **Piotroski F-score**: sum of up to 9 binary tests (profitability, leverage/liquidity, operating efficiency), each worth 1 point when passed. Tests that lack data are skipped, so the maximum can be below 9.
 
+### Notation
+
+| Symbol | Meaning |
+|---|---|
+| $r_t$ | simple daily return of the asset |
+| $\mu$, $\sigma$ | mean and standard deviation of daily returns |
+| $\alpha$ (in VaR/ES) | confidence level (95% or 99%) |
+| $z_\alpha$ | standard normal quantile (1.645 at 95%, 2.326 at 99%) |
+| $S$, $K$ | skewness and excess kurtosis of returns |
+| $r_m$ | daily return of the benchmark index |
+| $R_f$, $r_f$ | annual and daily risk-free rate |
+| $\sigma_{down}$ | standard deviation of returns below $r_f$ |
+| $\bar{r}$ | annualized mean return (daily mean x 252) |
+| VaR | loss not exceeded with probability $\alpha$ over the horizon |
+| ES | average loss on days when the loss exceeds the VaR |
+
 ## Project structure
 
 ```
