@@ -35,18 +35,39 @@ assessment** for stocks and commodity futures.
 
 ## Methodology
 
-| Metric | Definition |
-|---|---|
-| Volatility | daily standard deviation of returns x sqrt(252) |
-| Historical VaR | empirical percentile of daily returns |
-| Parametric VaR | mean - z x sigma, assuming normal returns |
-| Cornish-Fisher VaR | normal quantile z adjusted for skewness and excess kurtosis |
-| Expected Shortfall | average loss on days beyond the VaR threshold |
-| Beta | Cov(asset, benchmark) / Var(benchmark) on aligned daily returns |
-| Jensen's alpha | annualized asset return - [Rf + beta x (benchmark return - Rf)] |
-| Sharpe / Sortino | excess return over total volatility / over downside volatility |
+All risk metrics use the last 5 years of daily closes. Returns are simple daily returns
+$r_t = P_t / P_{t-1} - 1$, with $\mu$ their mean and $\sigma$ their standard deviation.
+The risk-free rate $R_f$ is adjustable in the sidebar.
 
-Risk metrics use the last 5 years of daily closes. The risk-free rate is adjustable in the sidebar.
+**Volatility (annualized)**
+
+$$\sigma_{ann} = \sigma \sqrt{252}$$
+
+**Historical VaR and Expected Shortfall** (confidence level $\alpha$, losses expressed as positive numbers)
+
+$$\text{VaR}_\alpha = -Q_{1-\alpha}(r) \qquad \text{ES}_\alpha = -\mathbb{E}\left[r \mid r \le -\text{VaR}_\alpha\right]$$
+
+**Parametric VaR** (normal returns), scaled to 10 days with the square-root-of-time rule
+
+$$\text{VaR}_\alpha = -(\mu - z_\alpha \sigma) \qquad \text{VaR}_{10d} = \text{VaR}_{1d} \sqrt{10}$$
+
+**Cornish-Fisher VaR**: the normal quantile is corrected for skewness $S$ and excess kurtosis $K$
+
+$$z_{CF} = z + \frac{(z^2-1)S}{6} + \frac{(z^3-3z)K}{24} - \frac{(2z^3-5z)S^2}{36}$$
+
+$$\text{VaR}_{CF} = -(\mu - z_{CF}\,\sigma)$$
+
+**CAPM: beta, R-squared and Jensen's alpha** (benchmark returns $r_m$, annualized means $\bar{r}$)
+
+$$\beta = \frac{\text{Cov}(r, r_m)}{\text{Var}(r_m)} \qquad R^2 = \text{Corr}(r, r_m)^2$$
+
+$$\alpha = \bar{r}_{asset} - \left[R_f + \beta\left(\bar{r}_{m} - R_f\right)\right]$$
+
+**Sharpe and Sortino ratios** (annualized, with daily risk-free rate $r_f$ and $\sigma_{down}$ the standard deviation of returns below $r_f$)
+
+$$\text{Sharpe} = \frac{\mathbb{E}[r - r_f]}{\sigma}\sqrt{252} \qquad \text{Sortino} = \frac{\mathbb{E}[r - r_f]}{\sigma_{down}}\sqrt{252}$$
+
+**Piotroski F-score**: sum of up to 9 binary tests (profitability, leverage/liquidity, operating efficiency), each worth 1 point when passed. Tests that lack data are skipped, so the maximum can be below 9.
 
 ## Project structure
 
